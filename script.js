@@ -37,7 +37,7 @@ function renderTask(taskObj) {
     // Delete Button ka Event
     del_btn.addEventListener("click", () => {
         AddItem.remove();
-        tasks = tasks.filter((t)=> t !== taskObj.text);
+        tasks = tasks.filter((t)=> t.text !== taskObj.text);
         localStorage.setItem("tasksList", JSON.stringify(tasks));
     });
 
